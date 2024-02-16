@@ -1,0 +1,9 @@
+<div class="section_text_p1" >
+  <div class="inner-certification" *ngFor="let certification of certifications">
+    <img src="{{certification.imgPath}}" alt="none">
+    <h3 class="title">{{ certification.name }}</h3>
+    <p>{{ certification.description }}</p>
+    <p>Issued by: {{ certification.issuer }}</p>
+    <p>Date: {{ certification.date }}</p>
+  </div>
+</div>
