@@ -111,11 +111,10 @@ li a:hover {
     top: 60px;
     width: 300px;
     height: 0;
-
     background-color: rgba(255, 255, 255, 0.2);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px); /* Adjusted the blur value for consistency */
-   
+    -webkit-backdrop-filter: blur(10 px) !important;
+    -moz-backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(10px) !important;   
     border-radius: 10px;
     overflow: hidden;
     display: none;
