@@ -150,11 +150,16 @@ body {
     }
 }
 
-@media (max-width: 990px) {
+@media (min-width: 1200px) {
     .header {
         font-size: 24px;
     }
-
+    .text-12 img {
+        width: 40%;
+    }
+    .text-11 img {
+        width: 40%;
+    }
     .text {
         font-size: 24px;
     }
