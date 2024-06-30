@@ -25,7 +25,7 @@ body {
     justify-content: center;
     align-items: center;
     background: rgba(126, 217, 87, 255);
-    animation: slide-out-container 4.5s cubic-bezier(0.97, 0.01, 0.36, 0.99) 2.8s;
+    animation: slide-out-container 1s cubic-bezier(0.97, 0.01, 0.36, 0.99) 2.8s;
     animation-fill-mode: forwards;
 }
 
