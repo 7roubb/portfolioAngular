@@ -1,19 +1,25 @@
 .section_text_p1{
+    margin :5%;
     display: flex;
     justify-content: center;
     text-align: center;
     height: 100%;
     gap: 5em;
+    flex-wrap: wrap;
+    
+
     
 }
 .inner-certification{
+    padding-bottom: 50px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 img{
-    height: 400px;
+    max-height: 400px;
+    max-width: 600px;
     padding-bottom:40px ;
     
 }
