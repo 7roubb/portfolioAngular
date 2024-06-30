@@ -14,7 +14,7 @@ body {
     font-family: "Monument Extended";
     text-transform: uppercase;
     font-size: 100px;
-    z-index: -1;
+    z-index: 3;
 }
 
 .container {
@@ -25,101 +25,117 @@ body {
     justify-content: center;
     align-items: center;
     background: rgba(126, 217, 87, 255);
-    animation: slide-out-container 4s cubic-bezier(0.97, 0.01, 0.36, 0.99) 2.8s;
+    animation: slide-out-container 2s cubic-bezier(0.97, 0.01, 0.36, 0.99) 2.8s;
     animation-fill-mode: forwards;
 }
 
 .text-wrapper {
-    color: white;
-    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust height as needed */
+    position: relative;
+    z-index: 0;
 }
 
-.text {
-    font-family: "Monument Extended";
-    font-weight: lighter;
-    font-size: 54px;
+
+
+.text img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease-in-out; /* Smooth transition on transform */
 }
 
-.text-1,
-.text-3,
-.text-4,
-.text-8,
-.text-9,
-.text-11 {
-    color: rgba(0, 0, 0, 0);
-    -webkit-text-stroke: 1px white;
-}
 
-@keyframes blink {
-    0% {
-        opacity: 0%;
-    }
-    1% {
-        opacity: 100%;
-    }
-    99% {
-        opacity: 100%;
-    }
-    100% {
-        opacity: 0;
-    }
-}
+
 
 
 .text-12 {
-    display:flex ;
+    display: flex;
     justify-content: center;
     align-items: center;
-    animation: blink 0.8s linear 0.9s, blink 4.7s linear 0s;
+    animation: blink 3.9s , enterFromBottom 1s ;
+    opacity: 0;
+    position: absolute;
+    z-index: 0;
+}
+
+.text-12 img {
+    max-width: 70%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease-in-out; /* Smooth transition on transform */
+}
+
+.text-11 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: blink 3.9s , enterFromTop 1s ;
     opacity: 0;
 }
-.text-12 img{
-    width: 60%;
 
-} 
+.text-11 img {
+    max-width: 70%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease-in-out; /* Smooth transition on transform */
 
+}
 
-@keyframes slide-out {
-    0% {
-        opacity: 0%;
+@keyframes enterFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-100vh); /* Move from top of the page */
     }
-    1% {
-        opacity: 100%;
-    }
-
-    19% {
-        opacity: 100%;
-    }
-    20% {
-        opacity: 0%;
-    }
-
-    39% {
-        opacity: 0%;
-    }
-    40% {
-        opacity: 100%;
-    }
-
-    59% {
-        opacity: 100%;
-    }
-    60% {
-        opacity: 0%;
-    }
-
-    79% {
-        opacity: 0%;
-    }
-    80% {
-        opacity: 100%;
-    }
-
-    100% {
-        opacity: 100%;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
+@keyframes enterFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100vh); /* Move from bottom of the page */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes exitToTop {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-100vh); /* Move to top of the page */
+    }
+}
+
+@keyframes exitToBottom {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(100vh); /* Move to bottom of the page */
+    }
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 100%;
+    }
+}
 @keyframes slide-out-container {
     0% {
         height: 100vh;
