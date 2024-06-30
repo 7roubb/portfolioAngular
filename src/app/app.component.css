@@ -25,7 +25,7 @@ body {
     justify-content: center;
     align-items: center;
     background: rgba(126, 217, 87, 255);
-    animation: slide-out-container 2s cubic-bezier(0.97, 0.01, 0.36, 0.99) 2.8s;
+    animation: slide-out-container 4.5s cubic-bezier(0.97, 0.01, 0.36, 0.99) 2.8s;
     animation-fill-mode: forwards;
 }
 
@@ -55,14 +55,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: blink 3.9s , enterFromBottom 1s ;
+    animation: blink 3.9s , enterFromBottom 2s ;
     opacity: 0;
     position: absolute;
     z-index: 0;
 }
 
 .text-12 img {
-    max-width: 70%;
+    max-width: 60%;
     height: auto;
     display: block;
     transition: transform 0.5s ease-in-out; /* Smooth transition on transform */
@@ -72,12 +72,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: blink 3.9s , enterFromTop 1s ;
+    animation: blink 3.9s , enterFromTop 2s ;
     opacity: 0;
 }
 
 .text-11 img {
-    max-width: 70%;
+    max-width: 60%;
     height: auto;
     display: block;
     transition: transform 0.5s ease-in-out; /* Smooth transition on transform */
