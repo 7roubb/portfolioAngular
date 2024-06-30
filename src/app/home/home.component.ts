@@ -1,33 +1,33 @@
-import { Component ,ElementRef, ViewChild, AfterViewInit} from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit, OnInit } from '@angular/core';
 import Typed from 'typed.js';
-
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css','../../mediaquareis.css']
+  styleUrls: ['./home.component.css', '../../mediaquareis.css']
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent implements AfterViewInit, OnInit {
   @ViewChild('typedElement') typedElement: ElementRef;
   textToType: string = "Osama Hroub";
   typedText: string = "";
+
   constructor() { }
+
+  ngOnInit(): void {
+    this.typeText();
+  }
 
   ngAfterViewInit() {
     const options = {
-      strings: ['Web Designer', 'Backend Developer','Frontend Developer'], 
-      typeSpeed: 70, 
-      backSpeed: 70, 
+      strings: ['Web Designer', 'Backend Developer', 'Frontend Developer'],
+      typeSpeed: 70,
+      backSpeed: 70,
       showCursor: true,
       cursorChar: '',
-
-      loop: true 
+      loop: true
     };
 
     new Typed(this.typedElement.nativeElement, options);
-  }
-  ngOnInit(): void {
-    this.typeText();
   }
 
   typeText() {
@@ -38,7 +38,6 @@ export class HomeComponent implements AfterViewInit {
       if (currentIndex > this.textToType.length) {
         clearInterval(typingInterval);
       }
-    }, 100); 
+    }, 100);
   }
-
 }

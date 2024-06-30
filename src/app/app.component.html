@@ -1,2 +1,13 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
+<!-- app.component.html -->
+<div *ngIf="isHomePage" class="container">
+    <div class="text-wrapper">
+        
+        <div class="text-12 text"><img src="../assets/intro.gif"  alt=""></div>
+
+        
+      </div>
+  </div>
+  
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+  
